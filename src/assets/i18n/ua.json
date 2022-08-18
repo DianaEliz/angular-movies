@@ -1,0 +1,19 @@
+{
+    "AllTimePopular": "Популярний за весь час",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "Login": "Зареєструватися",
+    "Logout": "Вийти",
+    "Movies": "Фільми",
+    "Name": "Ім'я",
+    "NoReviews": "Відгуків ще немає.",
+    "Password": "Пароль",
+    "PopularInTheatre": "Популярнi у театрах",
+    "RateThisMovie": "Оцініть цей фільм",
+    "Rating": "Рейтинг",
+    "Review": "Відгук",
+    "Reviews": "Відгуки",
+    "Submit": "Подати",
+    "TrendingMovies": "Трендові фільми",
+    "Username": "Ім'я користувача",
+    "ViewAll": "Переглянути всі"
+}

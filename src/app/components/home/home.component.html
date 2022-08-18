@@ -3,8 +3,8 @@
   <div class="all-movies">
     <div class="trending-movies">
       <div class="top">
-        <h4>Trending movies</h4>
-        <div class="view-all">View all</div>
+        <h4>{{ "TrendingMovies" | translate }}</h4>
+        <div class="view-all">{{ "ViewAll" | translate }}</div>
       </div>
     </div>
     <div class="movies-thumbnail">
@@ -25,8 +25,8 @@
     </div>
     <div class="theatre-movies">
       <div class="top">
-        <h4>Popular in theatres</h4>
-        <div class="view-all">View all</div>
+        <h4>{{ "PopularInTheatre" | translate }}</h4>
+        <div class="view-all">{{ "ViewAll" | translate }}</div>
       </div>
     </div>
     <div class="movies-thumbnail">
@@ -47,10 +47,12 @@
     </div>
   </div>
   <div class="popular-movies">
-    <h4>All Time Popular</h4>
+    <h4>{{ "AllTimePopular" | translate }}</h4>
     <div class="movies">
       <div class="movie" *ngFor="let movie of popularMovies">
-        <div class="name" (click)="goToMovie('popular', movie.id)">{{ movie.name }}</div>
+        <div class="name" (click)="goToMovie('popular', movie.id)">
+          {{ movie.name }}
+        </div>
         <div class="rating">
           <app-star-rating
             [rating]="movie.rating"
