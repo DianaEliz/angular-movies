@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../services/auth.service';
+import { User } from '../../models/user';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -8,8 +9,7 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  username = "";
-  password = "";
+  user: User = new User;
   errorMsg = "";
 
   constructor(private auth: AuthService, private router: Router) { }
@@ -18,12 +18,12 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    if (this.username.trim().length === 0) {
+    if (this.user.name.trim().length === 0) {
       this.errorMsg = "Username is required."
-    } else if (this.password.trim().length === 0) {
+    } else if (this.user.password.trim().length === 0) {
       this.errorMsg = "Password is required."
     } else {
-      let res = this.auth.login(this.username, this.password);
+      let res = this.auth.login(this.user.name, this.user.password);
       if (res === 200) {
         this.router.navigate(['home']);
       }

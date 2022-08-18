@@ -2,16 +2,16 @@
 <div class="movie-container">
   <div class="top">
     <div class="left">
-      <div class="name">{{ movie?.name }}</div>
+      <div class="name">{{ movie.name }}</div>
       <div class="rating">
         <app-star-rating
-          [rating]="movie?.rating"
+          [rating]="movie.rating"
           [isReadOnly]="true"
         ></app-star-rating>
         <span class="rating-value">{{ movie.rating }}</span>
       </div>
       <div class="cover">
-        <img [src]="movie?.cover" alt="" />
+        <img [src]="movie.cover" alt="" />
       </div>
     </div>
     <div class="right">
@@ -42,8 +42,8 @@
   </div>
   <div class="bottom">
     <h4 class="title">Reviews</h4>
-    <div class="reviews" *ngIf="movie?.reviews?.length > 0">
-      <div class="review" *ngFor="let review of movie?.reviews">
+    <div class="reviews" *ngIf="movie.reviews.length > 0">
+      <div class="review" *ngFor="let review of movie.reviews">
         <div class="review-details">
           <div class="review-left">
             <div class="author">{{ review.author }}</div>
@@ -64,7 +64,7 @@
         </div>
       </div>
     </div>
-    <div class="reviews" *ngIf="movie?.reviews?.length === 0">
+    <div class="reviews" *ngIf="movie.reviews.length === 0">
       <div class="no-reviews">No reviews yet.</div>
     </div>
   </div>
