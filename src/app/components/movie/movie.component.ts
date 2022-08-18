@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { MovieTypeEnum } from '../../models/enums/movie-type-enum';
 import { Movie } from '../../models/movie';
 import { MovieService } from '../../services/movie.service';
 
