@@ -5,9 +5,10 @@ import { Movie } from '../../models/movie';
 import { MovieService } from '../../services/movie.service';
 
 @Component({
-  selector: 'app-movie',
-  templateUrl: './movie.component.html',
-  styleUrls: ['./movie.component.scss']
+    selector: 'app-movie',
+    templateUrl: './movie.component.html',
+    styleUrls: ['./movie.component.scss'],
+    standalone: false
 })
 export class MovieComponent implements OnInit {
   type: string = '';
