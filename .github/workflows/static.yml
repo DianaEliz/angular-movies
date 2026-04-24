@@ -31,13 +31,25 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Angular App
+        # Replace <repository-name> with your actual GitHub repository name
+        # Modern Angular versions (17+) output to dist/<app-name>/browser
+        run: ng build --configuration production --base-href /angular-movies/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: 'dist/angular-movies/browser'
+          path: 'dist/angular-movies'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
