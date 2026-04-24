@@ -38,12 +38,12 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Install Dependencies
-        run: npm ci --legacy-peer-deps
+        run: npm ci
 
       - name: Build Angular App
         # Replace <repository-name> with your actual GitHub repository name
         # Modern Angular versions (17+) output to dist/<app-name>/browser
-        run: ng build --configuration production --base-href /angular-movies/
+        run: npm run build --configuration production --base-href /angular-movies/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
